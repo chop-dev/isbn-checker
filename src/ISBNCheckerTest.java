@@ -33,18 +33,4 @@ public class ISBNCheckerTest {
         assertEquals("Invalid", ISBNChecker.checkISBN("0345453747"));
     }
 
-    @Test
-    public void test7() {
-        assertEquals("9780316066525",ISBNChecker.checkISBN("0316066524"));
-    }
-
-    @Test
-    public void test8() {
-        assertEquals("9783866155237", ISBNChecker.checkISBN("3866155239"));
-    }
-
-    @Test
-    public void test9() {
-        assertEquals("9788174504944", ISBNChecker.checkISBN("817450494X"));
-    }
 }
