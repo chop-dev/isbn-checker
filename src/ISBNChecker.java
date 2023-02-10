@@ -43,7 +43,7 @@ public class ISBNChecker {
                 output = newISBN;
             }
 
-            // Determine if there's 13 Digits in the ISBN
+        // Determine if there's 13 Digits in the ISBN
         } else if (len == 13) {
 
             // Calculate the sum of the ISBN Digits
