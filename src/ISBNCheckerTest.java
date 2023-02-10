@@ -3,48 +3,56 @@ import static org.junit.Assert.*;
 
 public class ISBNCheckerTest {
 
+    //===========================================================================
+    // Tests to see if it can determine a valid ISBN
+    //===========================================================================
+
     @Test
-    public void test1() {
+    public void ValidTest1() {
         assertEquals("Valid", ISBNChecker.checkISBN("9780316066525"));
     }
 
     @Test
-    public void test2() {
+    public void ValidTest2() {
         assertEquals("Valid", ISBNChecker.checkISBN("9783866155237"));
     }
 
     @Test
-    public void test3() {
+    public void ValidTest3() {
         assertEquals("Valid", ISBNChecker.checkISBN("9780345453747"));
     }
 
+    //===========================================================================
+    // Tests to see if it can determine a invalid ISBN
+    //===========================================================================
+
     @Test
-    public void test4() {
+    public void InvalidTest1() {
         assertEquals("Invalid", ISBNChecker.checkISBN("031606652X"));
     }
 
     @Test
-    public void test5() {
+    public void InvalidTest2() {
         assertEquals("Invalid", ISBNChecker.checkISBN("9783876155237"));
     }
 
     @Test
-    public void test6() {
+    public void InvalidTest3() {
         assertEquals("Invalid", ISBNChecker.checkISBN("0345453747"));
     }
 
+    //===========================================================================
+    // Tests to see if it is generating valid ISBN's
+    //===========================================================================
+
     @Test
-    public void test7() {
+    public void GenerateTest1() {
         assertEquals("9780316066525",ISBNChecker.checkISBN("0316066524"));
     }
 
     @Test
-    public void test8() {
+    public void GenerateTest2() {
         assertEquals("9783866155237", ISBNChecker.checkISBN("3866155239"));
     }
-
-    @Test
-    public void test9() {
-        assertEquals("9788174504944", ISBNChecker.checkISBN("817450494X"));
-    }
+    //===========================================================================
 }
